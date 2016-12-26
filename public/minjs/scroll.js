@@ -1,0 +1,1 @@
+var oBox=document.querySelector("#box"),y=-60,x=45;oBox.onmousedown=function(e){var o=e||event,n=o.clientX-y,t=o.clientY-x;return document.onmousemove=function(e){var o=e||event;x=o.clientY-t,y=o.clientX-n,oBox.style.transform="perspective(800px) rotateX("+x+"deg) rotateY("+y+"deg)"},document.onmouseup=function(){document.onmousemove=null,document.onmouseup=null},!1};
